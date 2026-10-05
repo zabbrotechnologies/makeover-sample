@@ -218,7 +218,7 @@ export default function PushpalathaMentor({ onOpenEnquiry }: PushpalathaMentorPr
             <div className="lg:col-span-5 relative order-2 lg:order-1">
               <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-[#DDD7CB] shadow-xl bg-[#E7E2D9]">
                 <Image
-                  src="/assets/masterclass-atelier.jpg"
+                  src="./assets/masterclass-atelier.jpg"
                   alt="Pushpalatha conducting a private bridal makeup masterclass at Nandhas Creation Atelier"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

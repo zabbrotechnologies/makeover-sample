@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/makeover-sample',
+    assetPrefix: '.',
     images: {
         unoptimized: true,
     }
