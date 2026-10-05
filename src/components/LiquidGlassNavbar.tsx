@@ -87,7 +87,7 @@ export default function LiquidGlassNavbar({ onOpenEnquiry }: LiquidGlassNavbarPr
             {/* Primary ENQUIRE NOW Button */}
             <button
               onClick={onOpenEnquiry}
-              className="relative inline-flex items-center gap-2 rounded-full border border-[#b99762]/40 bg-gradient-to-r from-[#b99762]/20 via-[#dfc79c]/15 to-[#b99762]/20 px-5 py-2 text-[11px] font-mono font-bold tracking-widest text-[#dfc79c] backdrop-blur-xl shadow-lg shadow-[#b99762]/10 transition-all duration-400 hover:border-[#b99762] hover:bg-[#b99762] hover:text-black hover:shadow-[#b99762]/30 active:scale-95"
+              className="relative hidden md:inline-flex items-center gap-2 rounded-full border border-[#b99762]/40 bg-gradient-to-r from-[#b99762]/20 via-[#dfc79c]/15 to-[#b99762]/20 px-5 py-2 text-[11px] font-mono font-bold tracking-widest text-[#dfc79c] backdrop-blur-xl shadow-lg shadow-[#b99762]/10 transition-all duration-400 hover:border-[#b99762] hover:bg-[#b99762] hover:text-black hover:shadow-[#b99762]/30 active:scale-95"
             >
               <Sparkles className="h-3 w-3 text-[#b99762] transition-transform duration-300 group-hover:rotate-12" />
               <span>ENQUIRE NOW</span>
