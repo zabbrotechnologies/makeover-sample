@@ -1,23 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ivory: #F7F5F0;
+  --ivory-2: #FCFBF8;
+  --stone: #E7E2D9;
+  --taupe: #B4AA9D;
+  --charcoal: #181715;
+  --charcoal-dark: #11100E;
+  --black: #080807;
+  --champagne: #B99762;
+  --gold: #947346;
+  --ink: #181715;
+  --muted: #6E675C;
+  --danger: #9E3B2B;
+  --line: rgba(24, 23, 21, 0.14);
+  --line-dark: rgba(247, 245, 240, 0.16);
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --pad: clamp(20px, 4.5vw, 72px);
+  --sec: clamp(80px, 11vw, 176px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #080807;
+  color: #181715;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-family: var(--sans);
+  background-color: #080807;
+  color: #181715;
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080807;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2823;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b99762;
+}
+
+/* Editorial typography utilities */
+.font-serif {
+  font-family: var(--serif);
+}
+
+.font-sans {
+  font-family: var(--sans);
+}
+
+.font-mono {
+  font-family: var(--mono);
+}
+
+.hero-display {
+  font-size: clamp(52px, 8.5vw, 130px);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+}
+
+.editorial-statement {
+  font-size: clamp(36px, 5.8vw, 92px);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-size: clamp(30px, 4.8vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+}
+
+/* Luxury gold text gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbf7ee 0%, #dfc79c 35%, #b99762 70%, #947346 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-darkgold {
+  background: linear-gradient(135deg, #181715 0%, #947346 60%, #b99762 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Liquid Glass System (Navbar & selective hero overlays) */
+.liquid-glass-nav {
+  background: rgba(14, 13, 12, 0.62);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(247, 245, 240, 0.12);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.liquid-glass-nav-scrolled {
+  background: rgba(12, 11, 10, 0.88);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border-color: rgba(185, 151, 98, 0.32);
+  box-shadow: 
+    0 24px 50px -12px rgba(0, 0, 0, 0.85),
+    0 0 30px -5px rgba(185, 151, 98, 0.14),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.22);
+}
+
+.liquid-glass-card {
+  position: relative;
+  background: rgba(18, 17, 15, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(247, 245, 240, 0.09);
+  box-shadow: 
+    0 20px 45px -12px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card:hover {
+  background: rgba(24, 23, 20, 0.85);
+  border-color: rgba(185, 151, 98, 0.36);
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.85),
+    0 0 35px -5px rgba(185, 151, 98, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+/* Warm Ivory Editorial Cards */
+.ivory-card {
+  background: #FCFBF8;
+  border: 1px solid #E7E2D9;
+  box-shadow: 0 12px 32px -8px rgba(24, 23, 21, 0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ivory-card:hover {
+  border-color: #B99762;
+  box-shadow: 0 20px 44px -10px rgba(185, 151, 98, 0.15);
+}
+
+/* Editorial Underline Inputs from sample #booking */
+.editorial-input {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: #181715;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(24, 23, 21, 0.18);
+  border-radius: 0;
+  padding: 12px 2px;
+  transition: border-color 0.35s ease, background-color 0.35s ease;
+  outline: none;
+}
+
+.editorial-input:focus {
+  border-bottom-color: #947346;
+}
+
+.editorial-input::placeholder {
+  color: #B4AA9D;
+}
+
+/* Film grain subtle overlay */
+.film-grain {
+  background-image: radial-gradient(rgba(24, 23, 21, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
 }
 
 @layer utilities {

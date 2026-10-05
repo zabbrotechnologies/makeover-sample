@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpalatha - Nandhas Creation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#b99762',
+                            light: '#dfc79c',
+                        },
+                        dark: '#08080a',
+                        ivory: '#F7F5F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #08080a; color: white; scroll-behavior: smooth; }
+        .liquid-glass-nav {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+        .ivory-card {
+            background: linear-gradient(145deg, #ffffff, #f0ede6);
+            border: 1px solid #DDD7CB;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-dark">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 md:px-12 py-4 md:py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="liquid-glass-nav flex items-center gap-3.5 rounded-full px-4 py-2">
+                <div class="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-tr from-gold via-gold-light to-white">
+                    <span class="font-serif text-xs font-black text-black">P</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-mono text-xs font-bold tracking-widest text-white uppercase">PUSHPALATHA</span>
+                    <span class="font-mono text-[8px] tracking-widest text-gold-light uppercase">NANDHAS CREATION</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex liquid-glass-nav items-center space-x-8 px-7 py-2.5 rounded-full">
+                <a href="#about" class="text-[11px] font-mono tracking-widest text-neutral-300 uppercase hover:text-white">About</a>
+                <a href="#mastery" class="text-[11px] font-mono tracking-widest text-neutral-300 uppercase hover:text-white">Mastery</a>
+                <a href="#booking" class="text-[11px] font-mono tracking-widest text-neutral-300 uppercase hover:text-white">Booking</a>
+            </nav>
+
+            <button class="liquid-glass-nav flex items-center gap-2 rounded-full px-5 py-2 text-[11px] font-mono font-bold tracking-widest text-gold-light hover:bg-gold hover:text-black transition">
+                <i data-lucide="sparkles" class="h-3 w-3"></i>
+                ENQUIRE NOW
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero / Canvas Placeholder Section -->
+    <section class="relative min-h-screen flex items-center justify-center border-b border-white/10 pt-24">
+        <div class="text-center z-10 px-6">
+            <span class="font-mono text-xs uppercase tracking-widest text-gold mb-4 block">Signature Bridal Makeover</span>
+            <h1 class="text-5xl md:text-7xl font-serif mb-6 text-white">Editorial Beauty <br><span class="text-gold italic">Redefined.</span></h1>
+            <p class="max-w-xl mx-auto text-neutral-400 font-light mb-8">South Indian bridal precision fused with financial architecture, client positioning, and brand authority.</p>
+        </div>
+        <!-- Decorative bg -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/10 via-dark to-dark -z-10"></div>
+    </section>
+
+    <!-- The Trap Section -->
+    <section id="about" class="py-24 md:py-36 px-6 md:px-14 bg-ivory text-[#181715]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 border-b border-[#DDD7CB] pb-6">
+                <span class="font-mono text-[11px] tracking-widest text-[#6E675C] uppercase block mb-3">02 // THE INDUSTRY REALITY</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-normal">The Trap Most <br><span class="italic text-gold">Makeup Artists Never Escape.</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="ivory-card p-8 rounded-2xl">
+                    <span class="font-mono text-xs text-gold uppercase tracking-widest block mb-4">01 / THE PRICE WAR</span>
+                    <h3 class="font-serif text-2xl mb-3">Trapped in the ₹5K-10K Loop</h3>
+                    <p class="text-sm text-[#6E675C]">Competing against local parlour aunties and Instagram hobbyists on price. Brides haggle for discounts because positioning looks identical.</p>
+                </div>
+                <div class="ivory-card p-8 rounded-2xl">
+                    <span class="font-mono text-xs text-gold uppercase tracking-widest block mb-4">02 / FEAST & FAMINE</span>
+                    <h3 class="font-serif text-2xl mb-3">Extreme Inconsistency</h3>
+                    <p class="text-sm text-[#6E675C]">Making money only 4 months a year during peak Tamil muhurtham dates, followed by 8 months of zero predictable revenue.</p>
+                </div>
+                <div class="ivory-card p-8 rounded-2xl">
+                    <span class="font-mono text-xs text-gold uppercase tracking-widest block mb-4">03 / BURNOUT</span>
+                    <h3 class="font-serif text-2xl mb-3">Never a Business Owner</h3>
+                    <p class="text-sm text-[#6E675C]">Carrying 20kg kit bags alone at 3:00 AM, doing all the sarees, hair, and makeup without systems or assistants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-24 px-6 md:px-14 bg-ivory text-[#181715] border-t border-[#DDD7CB]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <span class="font-mono text-[11px] tracking-widest text-[#6E675C] uppercase block mb-3">10 / ADMISSIONS</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">Request an <br><span class="italic text-gold">Appointment.</span></h2>
+                <p class="text-[#6E675C] mb-8">Admissions for PRO MUA Mastery cohorts and signature bridal makeover dates are arranged by hand.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-[#DDD7CB]">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block font-mono text-[11px] uppercase tracking-widest text-[#6E675C] mb-1">Full Name</label>
+                        <input type="text" class="w-full border-b border-[#DDD7CB] bg-transparent pb-2 pt-1 focus:outline-none focus:border-gold" placeholder="e.g. Priya Sundaram">
+                    </div>
+                    <div>
+                        <label class="block font-mono text-[11px] uppercase tracking-widest text-[#6E675C] mb-1">Phone / WhatsApp</label>
+                        <input type="tel" class="w-full border-b border-[#DDD7CB] bg-transparent pb-2 pt-1 focus:outline-none focus:border-gold" placeholder="+91 98765 43210">
+                    </div>
+                    <div>
+                        <label class="block font-mono text-[11px] uppercase tracking-widest text-[#6E675C] mb-1">Program / Service</label>
+                        <select class="w-full border-b border-[#DDD7CB] bg-transparent pb-2 pt-1 focus:outline-none focus:border-gold">
+                            <option>PRO MUA Mastery — 4-Week Offline Residency</option>
+                            <option>Bespoke Bridal Makeover Consultation</option>
+                        </select>
+                    </div>
+                    <button type="button" class="w-full bg-[#181715] text-white py-3 rounded-full font-mono text-xs uppercase tracking-widest hover:bg-gold transition">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-10 border-t border-white/10">
+        <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest">© Pushpalatha Nandhas Creation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
